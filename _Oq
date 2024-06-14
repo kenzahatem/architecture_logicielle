@@ -1,0 +1,12 @@
+                                    Table "public.employee"
+ Column  |          Type          | Collation | Nullable |               Default                
+---------+------------------------+-----------+----------+--------------------------------------
+ id      | integer                |           | not null | nextval('employee_id_seq'::regclass)
+ name    | character varying(24)  |           | not null | 
+ email   | character varying(96)  |           |          | 
+ phone   | character varying(15)  |           |          | 
+ address | character varying(100) |           |          | 
+Indexes:
+    "employee_pkey" PRIMARY KEY, btree (id)
+    "employee_email_key" UNIQUE CONSTRAINT, btree (email)
+
